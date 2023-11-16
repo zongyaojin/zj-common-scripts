@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -exo pipefail
 
 # date and time with format and space
 export DateTime="[$(date '+%F %T')]"
