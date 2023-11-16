@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# ####################################################################################
+# This script installs some common dependencies that all packages need.
+# ####################################################################################
+
 set -exo pipefail
 
 # Update and install system-level package managment dependencies

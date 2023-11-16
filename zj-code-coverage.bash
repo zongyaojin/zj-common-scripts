@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# ####################################################################################
+# This script will build the package to `build/`, test it, run code coverage,
+#   and open firefox to display the results.
+# ####################################################################################
+
 set -exo pipefail
 
 script_file=$(realpath "$0")

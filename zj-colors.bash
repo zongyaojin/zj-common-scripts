@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# ####################################################################################
+# This script defines and exports some logging variables for other scripts to use.
+# ####################################################################################
+
 set -exo pipefail
 
 # date and time with format and space

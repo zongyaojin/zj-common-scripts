@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# ####################################################################################
+# This script sets up the pre-commit and run it for the package;
+#   assuming there's a `.pre-commit-config.yaml` in the package root, mandoary.
+# ####################################################################################
+
 set -exo pipefail
 
 script_file=$(realpath "$0")
