@@ -33,7 +33,7 @@ client_project_example_path=$package_path/client-project-example
 # Path to install the package from which the client project example will find it
 client_project_example_install_path=$client_project_example_path/install
 
-# Remove the build and install path for a fresh start
+# Remove the build and install paths for a fresh start
 rm -rf $package_build_path
 rm -rf $client_project_example_install_path
 
@@ -56,7 +56,7 @@ else
     echo "no system package dependencies install script found"
 fi
 
-# Go to the build directory, build and install for client project example, and test
+# Go to the build path, build and install for client project example, and test
 (
     cd $package_build_path
     cmake .. \

@@ -1,11 +1,13 @@
 # Common Scripts for Package Setup
 
-These scripts assume the following folder structure. The scripts are intended to be used by a `$package` that has this repository as a submodule in the path below.
+[![GitHub license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](https://github.com/zongyaojin/zj-base/blob/main/LICENSE)
+
+This repository is intended to be included as a submodule in a C++ `$package`, and it assumes the following folder structure.
 
 ```text
 $package/
     |-- cmake/zj-cmake/modules
-    |-- scripts/zj-common-scripts/ (*this module*)
+    |-- scripts/zj-common-scripts/ (*this repository as a submodule*)
     |-- thirdparty/
     |-- .pre-commit-config.yaml
     |-- CMakeLists.txt
