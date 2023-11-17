@@ -13,3 +13,10 @@ $package/
     |-- CMakeLists.txt
     |-- Doxyfile
 ```
+
+To include this repository as a submodule:
+
+```text
+> cd package_absolute_path
+> git submodule add <repository_url> ./scripts/zj-common-scripts
+```

@@ -19,10 +19,10 @@ sudo apt install -y cmake lcov
 # Doxygen dependencies
 sudo apt install -y doxygen doxygen-latex doxygen-doc doxygen-gui graphviz texlive-extra-utils texlive-latex-extra
 
-# Python dependencies
-sudo apt install -y python3-pip
+# Python dependencies, pip, venv
+sudo apt install -y python3-pip python3-venv
 pip install --upgrade pip setuptools
 
-# Code format and check tools
+# Pre-commit, code format and check tools
 sudo apt install -y cppcheck
 pip install --user pre-commit cmakelang isort cpplint
