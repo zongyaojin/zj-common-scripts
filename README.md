@@ -17,6 +17,9 @@ $package/
 To include this repository as a submodule:
 
 ```text
-> cd package_absolute_path
+> cd $package
 > git submodule add <repository_url> ./scripts/zj-common-scripts
+
+# Install dependencies before doing anything else
+> bash ./scripts/zj-common-scripts/zj-dependencies.bash
 ```
