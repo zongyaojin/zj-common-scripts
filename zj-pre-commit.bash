@@ -3,6 +3,8 @@
 # ####################################################################################
 # This script sets up the pre-commit and run it for the package;
 #   assuming there's a `.pre-commit-config.yaml` in the package root, mandoary.
+#
+# To unhook, run `pre-commit uninstall`
 # ####################################################################################
 
 set -exo pipefail
@@ -20,7 +22,7 @@ pip install --upgrade pip setuptools
 # Install pre-commit
 pip install --user pre-commit
 
-# Go to the source path, set up and run pre-commit
+# Go to the package path, set up and run pre-commit
 (
     cd $package_path
     pre-commit install
