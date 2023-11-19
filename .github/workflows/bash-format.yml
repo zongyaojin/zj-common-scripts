@@ -1,5 +1,5 @@
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
-name: Bash Formatting
+name: Bash Format
 
 on:
   push:
