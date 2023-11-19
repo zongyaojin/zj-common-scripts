@@ -1,0 +1,23 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+name: Bash Formatting
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      # Github checkout action | https://github.com/actions/checkout
+      # This repository doesn't have recursive private submodules
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup and run pre-commit
+        run: bash ./scripts/zj-pre-commit.bash

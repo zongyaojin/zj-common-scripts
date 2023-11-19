@@ -30,7 +30,7 @@ package_build_path=$package_path/build
     # Generating code coverage report
     # https://subscription.packtpub.com/book/programming/9781803239729/9/ch09lvl1sec56/generating-code-coverage-reports
 
-    # Get the `tests/` folder real path without `..` in it,  
+    # Get the `tests/` folder real path without `..` in it,
     #   since the `lcov` command's `--exclude` can only interpret real path
     tests_absolute_real_path="$(realpath "$package_path/tests/")"
     # Exclude system `/usr/` folder stuff and local `tests/` folder stuff

@@ -3,7 +3,7 @@ set -exo pipefail
 
 # ####################################################################################
 # This script runs doxygen to generate documentation for the package,
-#   and opens firefox to display it; 
+#   and opens firefox to display it;
 #   assuming there's a `Doxyfile` in the package root path, mandatory.
 # ####################################################################################
 

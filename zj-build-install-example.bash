@@ -6,7 +6,7 @@
 # It makes a `build/` folder and will build the package in it.
 # It makes a `client-project-example` folder and will install the package in it.
 #
-# If there's a `thirdparty/zj-build-thirdparty.bash` script in the package, 
+# If there's a `thirdparty/zj-build-thirdparty.bash` script in the package,
 #    that means the package needs some thridparty dependencies, this script will run it.
 # If there's a `scripts/zj-package-dependencies.bash` script in the package,
 #    that means the package needs some system dependencies, this script will run it.
