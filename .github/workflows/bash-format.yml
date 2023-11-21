@@ -20,4 +20,4 @@ jobs:
           submodules: recursive
 
       - name: Setup and run pre-commit
-        run: bash ./scripts/zj-pre-commit.bash
+        run: bash ./internal/internal-pre-commit.bash
