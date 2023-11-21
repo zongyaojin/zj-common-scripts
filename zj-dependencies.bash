@@ -6,12 +6,12 @@
 
 set -exo pipefail
 
-# Update and install system-level package managment dependencies
+# Update system package manager
 sudo apt update -y
 sudo apt upgrade -y
 
 # Build dependencies
-sudo apt install -y autoconf build-essential git libtool pkg-config shfmt wget
+sudo apt install -y autoconf build-essential git libtool pkg-config shfmt wget clang-format
 
 # CMake dependencies
 sudo apt install -y cmake lcov
