@@ -14,7 +14,7 @@ sudo apt upgrade -y
 sudo apt install -y autoconf build-essential git libtool pkg-config shfmt wget clang-format
 
 # CMake dependencies
-sudo apt install -y cmake lcov
+sudo apt install -y cmake lcov ccache
 
 # Doxygen dependencies
 sudo apt install -y doxygen doxygen-latex doxygen-doc doxygen-gui graphviz texlive-extra-utils texlive-latex-extra
