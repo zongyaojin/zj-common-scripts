@@ -32,7 +32,9 @@ invalid_input_prompt() {
     echo -e "   bash $filename -h"
 }
 
-# Argument parsing
+# Argument parsing, starting with a colon;
+#   followed by options with a colon (such as a and c, require an argument),
+#   or without a colon (such as b and d, do not require any arguments).
 while getopts ":ha:bc:d" option; do
     case $option in
         h)
@@ -64,7 +66,7 @@ shift "$((OPTIND - 1))"
 # Store the remaining arguments
 remaining_arguments=$@
 
-# Pring results
+# Print results
 echo -e "a_argument: $a_argument"
 echo -e "b_argument: $b_argument"
 echo -e "c_argument: $c_argument"
