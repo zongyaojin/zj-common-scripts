@@ -32,7 +32,7 @@ invalid_input_prompt() {
     echo -e "   bash $filename -h"
 }
 
-# Argument parsing, starting with a colon;
+# Argument parsing, starts with a colon (removing it doesn't seem to have any effect...);
 #   followed by options with a colon (such as a and c, require an argument),
 #   or without a colon (such as b and d, do not require any arguments).
 while getopts ":ha:bc:d" option; do
