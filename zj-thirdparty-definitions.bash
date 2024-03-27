@@ -6,9 +6,14 @@
 
 set -exo pipefail
 
+# This script is supposed to be called by master script
+#   `PACKAGE_ROOT/thirdparty/zj-build-thirdparty.bash`
+#   and use their path to define CMake arguments,
+#   so that the install path is relative to the path of the master script.
+# So, it uses `$0` (the calling script's path) instead of `${BASH_SOURCE[0]}` (current script's path).
 script_file=$(realpath "$0")
 script_absolute_path=$(dirname "$script_file")
-package_path=$(realpath $script_absolute_path/../..)
+package_path=$(realpath $script_absolute_path/..)
 package_build_path=$package_path/build
 
 package_thirdparty_path=$package_path/thirdparty
