@@ -17,7 +17,7 @@ documentation_html_path=$package_path/build/doc/html
 
 # Go to the package directory, generate doxygen and open with firefox
 (
-    cd $package_path
-    doxygen
-    firefox $documentation_html_path/index.html
+  cd $package_path
+  doxygen
+  firefox $documentation_html_path/index.html
 )

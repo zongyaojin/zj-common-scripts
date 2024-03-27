@@ -12,52 +12,52 @@ filename=$(basename "$script_file")
 
 # Usage prompt
 usage_prompt() {
-    echo -e "Bash script"
-    echo -e "   $script_file\n"
-    echo -e "Usage:"
-    echo -e "   bash $filename [options]\n"
-    echo -e "Options:"
-    echo -e "   -h  Print usage."
-    echo -e "   -a  Requires an argument."
-    echo -e "   -b  Dose not require any argument."
-    echo -e "   -c  Requires an argument."
-    echo -e "   -d  Does not require any argument."
+  echo -e "Bash script"
+  echo -e "   $script_file\n"
+  echo -e "Usage:"
+  echo -e "   bash $filename [options]\n"
+  echo -e "Options:"
+  echo -e "   -h  Print usage."
+  echo -e "   -a  Requires an argument."
+  echo -e "   -b  Dose not require any argument."
+  echo -e "   -c  Requires an argument."
+  echo -e "   -d  Does not require any argument."
 }
 
 # Invalid option or argument prompt
 invalid_input_prompt() {
-    echo -e "Error!"
-    echo -e "   Invalid options or missing mandatory arguments.\n"
-    echo -e "For more information:"
-    echo -e "   bash $filename -h"
+  echo -e "Error!"
+  echo -e "   Invalid options or missing mandatory arguments.\n"
+  echo -e "For more information:"
+  echo -e "   bash $filename -h"
 }
 
 # Argument parsing, starts with a colon (removing the it doesn't seem to have any effect...);
 #   followed by options with a trailing colon (such as a and c, indicating they require an argument),
 #   or options without a trailing colon (such as h, b, d, indicating they do not require any arguments).
 while getopts ":ha:bc:d" option; do
-    case $option in
-        h)
-            usage_prompt
-            exit
-            ;;
-        a)
-            a_argument=$OPTARG
-            ;;
-        b)
-            b_argument="option b doesn't need an argument"
-            ;;
-        c)
-            c_argument=$OPTARG
-            ;;
-        d)
-            d_argument="option d doesn't need an argument"
-            ;;
-        *)
-            invalid_input_prompt
-            exit
-            ;;
-    esac
+  case $option in
+    h)
+      usage_prompt
+      exit
+      ;;
+    a)
+      a_argument=$OPTARG
+      ;;
+    b)
+      b_argument="option b doesn't need an argument"
+      ;;
+    c)
+      c_argument=$OPTARG
+      ;;
+    d)
+      d_argument="option d doesn't need an argument"
+      ;;
+    *)
+      invalid_input_prompt
+      exit
+      ;;
+  esac
 done
 
 # Shift to remove processed options

@@ -45,28 +45,28 @@ package_thirdparty_build_script=$package_path/thirdparty/zj-build-thirdparty.bas
 package_dependencies_install_script=$package_path/scripts/zj-package-dependencies.bash
 
 if [ -e "$package_thirdparty_build_script" ]; then
-    bash $package_thirdparty_build_script
+  bash $package_thirdparty_build_script
 else
-    echo "no thridparty build script found"
+  echo "no thridparty build script found"
 fi
 
 if [ -e "$package_dependencies_install_script" ]; then
-    bash $package_dependencies_install_script
+  bash $package_dependencies_install_script
 else
-    echo "no system package dependencies install script found"
+  echo "no system package dependencies install script found"
 fi
 
 # Go to the build path, build and install for client project example, and test
 (
-    cd $package_build_path
-    cmake .. \
-        -D ZJ_CODE_COVERAGE=OFF \
-        -D CMAKE_INSTALL_PREFIX=$client_project_example_install_path \
-        -D CMAKE_PREFIX_PATH=$package_path/thirdparty/install \
-        -D CMAKE_MODULE_PATH=$package_path/cmake/zj-cmake/modules \
-        -D CMAKE_BUILD_TYPE=Release \
-        -D BUILD_SHARED_LIBS=OFF \
-        -D BUILD_TESTING=ON
-    make install
-    ctest
+  cd $package_build_path
+  cmake .. \
+    -D ZJ_CODE_COVERAGE=OFF \
+    -D CMAKE_INSTALL_PREFIX=$client_project_example_install_path \
+    -D CMAKE_PREFIX_PATH=$package_path/thirdparty/install \
+    -D CMAKE_MODULE_PATH=$package_path/cmake/zj-cmake/modules \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D BUILD_SHARED_LIBS=OFF \
+    -D BUILD_TESTING=ON
+  make install
+  ctest
 )
