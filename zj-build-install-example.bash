@@ -19,25 +19,25 @@
 # https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425
 set -exo pipefail
 
-# Get this script's filename with absolute path
+# Get this script's filename with absolute path.
 script_file=$(realpath "$0")
-# Get this script's absolute path without the filename
+# Get this script's absolute path without the filename.
 script_absolute_path=$(dirname "$script_file")
-# Defines the package's path
+# Defines the package's path.
 package_path=$(realpath $script_absolute_path/../..)
-# Define the package's build path
+# Define the package's build path.
 package_build_path=$package_path/build
 
-# Path to a client project example, which builds with the package as an dependency
+# Path to a client project example, which builds with the package as an dependency.
 client_project_example_path=$package_path/client-project-example
-# Path to install the package from which the client project example will find it
+# Path to install the package from which the client project example will find it.
 client_project_example_install_path=$client_project_example_path/install
 
-# Remove the build and install paths for a fresh start
+# Remove the build and install paths for a fresh start.
 rm -rf $package_build_path
 rm -rf $client_project_example_install_path
 
-# Make directories
+# Make directories.
 mkdir -p $package_build_path
 mkdir -p $client_project_example_install_path
 
@@ -56,7 +56,7 @@ else
   echo "no system package dependencies install script found"
 fi
 
-# Go to the build path, build and install for client project example, and test
+# Go to the build path, build and install for client project example, and test.
 (
   cd $package_build_path
   cmake .. \

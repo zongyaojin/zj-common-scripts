@@ -6,7 +6,7 @@
 
 set -exo pipefail
 
-# date and time with format and space
+# Date and time with format and space.
 export DateTime="[$(date '+%F %T')]"
 
 # https://gist.github.com/vratiu/9780109
