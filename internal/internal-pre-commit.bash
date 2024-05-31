@@ -22,8 +22,8 @@ pip install --user cmakelang pre-commit
 
 # Go to the package path, set up and run pre-commit
 (
-    cd $package_path
-    pre-commit install
-    pre-commit autoupdate
-    pre-commit run -a
+  cd $package_path
+  pre-commit install
+  pre-commit autoupdate
+  pre-commit run -a
 )
