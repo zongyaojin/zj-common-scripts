@@ -12,10 +12,10 @@ In terminal, or tmux command mode:
   [show info]      tmux info
   [listing]        tmux list-keys/commands/panes/windows
 
-  [attach session]               tmux a OR tmux a -t \$session_name
+  [attach session]               tmux a OR tmux a -t foo_bar
   [kill current/last session]    tmux kill-session OR tmux kill-ses
   [kill all but current session] tmux kill-ses -a
-  [kill target session]          tmux kill-ses -t \$session_name
+  [kill target session]          tmux kill-ses -t foo_bar
   [kill window]                  tmux kill-window OR tmux kill-win
 
 In tmux:
