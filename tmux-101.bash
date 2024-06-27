@@ -7,6 +7,7 @@ session="zjin"
 
 echo -e "
 In terminal, or tmux command mode:
+  [new session]    tmux OR tmux new -s foo_bar
   [list sessions]  tmux ls
   [kill server]    tmux kill-server OR tmux kill-ser
   [show info]      tmux info
@@ -20,6 +21,7 @@ In terminal, or tmux command mode:
 
 In tmux:
   [navigation]        C-b | arrows
+  [rename session]    C-b | $
   [adjust apne size]  C-b-arrows
   [copy, scrolling]   C-b | [
   [command mode]      C-b | :
