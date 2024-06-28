@@ -33,9 +33,12 @@ In tmux:
   [go to pane]        C-b | q | 0..9
   [kill pane]         C-d OR C-b | x
 
+  [new window]        C-b | c
+  [next window]       C-b | n
+  [previous window]   C-b | p
   [list windows]      C-b | w
   [go to window]      C-b | w | 0..9
-  [close window]      C-b | &
+  [kill window]       C-b | &
   [rename window]     C-b | ,
 
   [split vertical]    C-b | \"
