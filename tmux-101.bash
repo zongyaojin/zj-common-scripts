@@ -46,9 +46,9 @@ In tmux:
 "
 
 if command -v "terminator" >/dev/null 2>&1; then
-  attach_session_command='terminator --execute "tmux attach-session -t $session; exec bash"'
+  attach_session_command='terminator --new-tab --execute "tmux attach-session -t $session; exec bash"'
 else
-  attach_session_command='gnome-terminal -- bash -c "tmux attach-session -t $session; exec bash"'
+  attach_session_command='gnome-terminal --tab -- bash -c "tmux attach-session -t $session; exec bash"'
 fi
 
 if tmux has-session -t "$session" 2>/dev/null; then
